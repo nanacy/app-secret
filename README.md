@@ -1,5 +1,5 @@
 # README
-A site where you can create/red/update/destroy an user.
+A site where you can create/read/update/destroy an user.
 
 ## Admire the site
 The link : https://secret-app-heroku.herokuapp.com/
@@ -31,5 +31,5 @@ $ rails db:seed
 
 --------------------------------------
 
-MADE BY "ME"
+MADE BY :
 * Nancy CASSAND
