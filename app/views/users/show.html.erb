@@ -14,7 +14,10 @@
 		</p>
 
 		<p>
+			<% if @current_user != nil && @current_user.id == @user.id %>
 			<a class="btn btn-warning btn-lg" href="<%= edit_user_path(@user.id) %>"" role="button">Editer</a>
+
+			<% end %>
 
 			<a class="btn btn-danger btn-lg" href=<%= user_path(@user.id) %> role="button" data-confirm="Etes-vous sur de vouloir supprimer cet utilisateur ?" data-method="DELETE" >Supprimer</a>
 		</p>

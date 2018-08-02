@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+	<title></title>
+</head>
+<body>
+	<div class="center jumbotron">
+		<h1>LOG IN</h1>
+		<small>Remember your password please, and don't let people know. </small>
+		<hr class="my-4">	
+
+		<%= form_for(:session, url: login_path) do |f| %>
+			<%= f.label :email %>
+			<%= f.email_field :email, class: 'form-control' %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password, class: 'form-control' %>			
+			<hr class="my-4">	
+	    	<%= f.submit "LOG IN", class: "btn btn-success" %><br>
+	    	<p>New user ? <a href="users">Sign up now!</a></p>
+	    <% end %>
+
+		<a class="btn btn-primary btn-lg" href='/' role="button">Retour à l'accueil</a>	
+	</div>
+
+</body>
+</html>

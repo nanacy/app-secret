@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-	resources :users																	
+	resources :users														
 
-	get '/', to: 'static_pages#home'
+	root 'static_pages#home'
 	
-	get '/users', to: 'users#index'
-
+	get '/login', to:'sessions#new'
+	post '/login', to: 'sessions#create'
+	get '/login/show', to:'sessions#show'
+	delete '/logout', to: 'sessions#destroy'
+	get 'sessions/secret', to: 'sessions#secret_page'
 end

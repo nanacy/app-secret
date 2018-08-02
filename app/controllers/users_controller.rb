@@ -3,9 +3,10 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(pseudo: params["pseudo"], email: params["email"], password_digest: params["passwd"])
+		@user = User.new(pseudo: params["pseudo"], email: params["email"], password: params["password"])
 		if @user.save
 			puts "-"*10, "CREATION", "-"*10
+			log_in(@user)
 			redirect_to user_path(@user.id)
 		else
 			puts "-"*10, "NON CREER", "-"*10

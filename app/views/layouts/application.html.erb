@@ -10,6 +10,23 @@
   </head>
 
   <body>
+    <header>
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item"> <a class="nav-link" href="<%= "/"%>" >Accueil</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/login" >Connexion</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="<%= users_path %>" >Inscription</a> </li>
+            <% if logged_in? %>
+              <li class="nav-item" >
+                <%= link_to "Log out", logout_path, method: :delete, class: 'nav-link' %>
+            </li>
+            <% else %>
+                <li class="nav-item" >
+                     <%= link_to "Log in", login_path, class: 'nav-link' %> 
+                </li>
+            <% end %>
+        </ul>
+    </header>
+
     <%= yield %>
   </body>
 </html>
