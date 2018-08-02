@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+	<title></title>
+</head>
+<body>
+	<div class="center jumbotron">
+		<h1>Home Page</h1>
+		<p>You are here. Congratz!</p>
+
+		<a class="btn btn-primary btn-lg" href=<%= users_path %> role="button">Création d'un compte utilisateur</a>
+	</div>
+
+	<ul>
+		<% @user.reverse.each do |user| %>
+		<a href="<%= user_path(user.id) %>"> <%= user.pseudo %> </a><br> <%= user.email %><br>
+		<% end %>
+</ul>
+
+</body>
+</html>

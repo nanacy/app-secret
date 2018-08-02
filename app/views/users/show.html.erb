@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+	<title></title>
+</head>
+<body>
+	<div class="center jumbotron">
+		<h1>PROFIL</h1>
+
+		<p>
+			Pseudo : <%= @user.pseudo %><br>
+			Email : <%= @user.email %>
+		</p>
+
+		<p>
+			<a class="btn btn-warning btn-lg" href="<%= edit_user_path(@user.id) %>"" role="button">Editer</a>
+
+			<a class="btn btn-danger btn-lg" href=<%= user_path(@user.id) %> role="button" data-confirm="Etes-vous sur de vouloir supprimer cet utilisateur ?" data-method="DELETE" >Supprimer</a>
+		</p>
+
+		<a class="btn btn-primary btn-lg" href="/" role="button">Retour à l'accueil</a>
+	</div>
+</body>
+</html>

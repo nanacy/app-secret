@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+	<title></title>
+</head>
+<body>
+	<div class="center jumbotron">
+		<h1>Register for free!</h1>
+
+		<form method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+			<div class="form-group row">
+			  <label for="example-text-input" class="col-2 col-form-label">Pseudo</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text" placeholder="abcd@gmail.com" name="pseudo">
+			  </div>
+			</div>
+
+			<div class="form-group row">
+			  <label for="example-text-input" class="col-2 col-form-label">Email</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text" placeholder="abcd@gmail.com" name="email">
+			  </div>
+			</div>
+
+			<div class="form-group row">
+			  <label for="example-search-input" class="col-2 col-form-label">Password</label>
+			  <div class="col-10">
+			    <input class="form-control" type="text" placeholder="abcd" name="passwd">
+			  </div>
+			</div>
+			<button type="submit" class="btn btn-success">Submit</button>
+		</form>
+
+		<br><br>
+		<a class="btn btn-primary btn-lg" href="/" role="button">Retour à l'accueil</a>
+	</div>
+
+</body>
+</html>
