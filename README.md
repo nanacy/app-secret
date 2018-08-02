@@ -1,5 +1,6 @@
 # README
-A site where you can create/read/update/destroy an user.
+A site where you can create/read/update/destroy an user.  
+And read a secret page.
 
 ## Admire the site
 The link : https://secret-app-heroku.herokuapp.com/
